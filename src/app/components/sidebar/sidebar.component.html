@@ -1,0 +1,37 @@
+<div class="nav">    
+    
+    <ul>
+        <li>
+            <a [routerLink]="'./dashboard'">
+            <span class="icon"><img class="img" src="../../assets/images/wallet.png" /></span>
+            <span class="title"><h2>CRYPTOE</h2></span>
+            </a>
+        </li>
+        <li><a [routerLink]="'./wallet'" routerLinkActive="isActive">
+            <span class="icon"><img class="img" src="../../assets/images/wallet.png" /></span>
+            <span class="title">Wallet</span>
+            </a>
+        </li>
+        <li><a [routerLink]="'./market'" routerLinkActive="isActive">
+            <span class="icon"><img class="img" src="../../assets/images/market.png" /></span>
+            <span class="title">Market</span>
+            </a>
+        </li>
+        <li><a [routerLink]="'./exchange'" routerLinkActive="isActive">
+            <span class="icon"><img class="img" src="../../assets/images/exchange.png" /></span>
+            <span class="title">Exchange</span>
+            </a>
+        </li>
+        <li><a [routerLink]="'./account'" routerLinkActive="isActive">
+            <span class="icon"><img class="img" src="../../assets/images/account.png" /></span>
+            <span class="title">Account</span>
+            </a>
+        </li>
+    </ul>
+    <div class="bttnFooter">
+        <button>
+            <img class="img" src="../../assets/images/logout.png" />
+            <span>Logout</span>
+        </button>
+    </div>
+</div>
