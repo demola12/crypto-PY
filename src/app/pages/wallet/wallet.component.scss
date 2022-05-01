@@ -1,0 +1,333 @@
+// .container {
+//     position: relative;
+//     width: 100%;
+// }
+// .main {
+//     position: absolute;
+//     width: calc(100% - 229px);
+//     left: 229px;
+//     min-height: 100vh;
+//     background: #f5f5f5;
+//     transition: 0.5s;
+.conWrapper {
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    position: relative;
+    padding: 30px 20px;
+    overflow-x: auto;
+    .con1 {
+        position: relative;
+        flex: 3;
+        height: auto;
+        margin-right: 16px;
+        overflow-x: auto;
+        .recentOrders {
+            position: relative;
+            min-height: 300px;
+            background: #fff;
+            // padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            .cardHeader {
+                padding: 20px 0 0 20px;
+                p {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #7F8798;
+                }
+                h5 {
+                    font-size: 16px;
+                    line-height: 27px;
+                    color: #171717;
+                    font-weight: 600;
+                    span {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 24px;
+                        color: #7F8798;
+                        padding-left: 20px;
+                    }
+                }
+            }
+            h3 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 27px;
+                color: #171717;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+                td {
+                    padding: 12px 5px;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 24px;
+                    color: #171717;
+                    padding-left: 20px;
+                    .coin {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 29px;
+                        }
+                        p {
+                            margin: 0 10px!important;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #171717;
+                            font-weight: 600;
+                        }
+                        span {
+                            font-size: 12px;
+                            line-height: 24px;
+                            color: #7F8798;
+                        }
+                    }
+                    .amount {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        font-weight: 600;
+                        p {
+                            line-height: 27px;
+                        }
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: #7F8798;
+                        }
+                    }
+                }
+                tr {
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                }
+                tr:hover {
+                    background: #f8f8f8;
+                    color: #fff;
+                }
+                thead {
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    border-left: 1px solid rgba(0, 0, 0, 0.1);
+                    border-right: 1px solid rgba(0, 0, 0, 0.1);
+                    tr {
+                        border: none;
+                    }
+                    tr:hover:first-child {
+                        background-color: #fff;
+                    }
+                    th {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #7F8798;
+                        text-align: left;
+                        padding: 10px 0;
+                        padding-left: 20px;
+                    }
+                }
+                .tradeBtn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    button:nth-of-type(1) {
+                        background: #2779EC;
+                        border-radius: 10px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #FFFFFF;
+                        padding: 10px 20px;
+                        margin: 0 5px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    button:nth-of-type(1):hover {
+                        background: #0c6bf0;
+                    }
+                    button:nth-of-type(2) {
+                        background: #fff;
+                        border-radius: 10px;
+                        font-size: 12px;
+                        line-height: 13px;
+                        color: #2779EC;
+                        padding: 10px 20px;
+                        margin: 0 5px;
+                        border: 2px solid #2779EC;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    button:nth-of-type(2):hover {
+                        background: #0c6bf0;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .oWrapper {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            margin-bottom: 30px;
+            padding: 20px 15px;
+            border-radius: 10px;
+            .headerCon {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h4 {
+                    font-size: 16px;
+                    line-height: 27px;
+                    color: #171717;
+                    flex: 1;
+                }
+                .days {
+                    flex: 0.5;
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 16px;
+                        line-height: 27px;
+                        color: #7F8798;
+                        margin-bottom: 0!important;
+                    }
+                    p:first-child {
+                        color: #2779EC;
+                        padding: 2px 10px;
+                        background: #EEFFEE;
+                    }
+                }
+            }
+        }
+    }
+    .con2 {
+        // width: 498px;
+        flex: 2;
+        height: auto;
+        margin-bottom: 20px;
+        flex: 1.5;
+        .conBox {
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 10px;
+            height: auto;
+            .con {
+                padding: 20px;
+                p {
+                    margin-bottom: 0!important;
+                    line-height: 5px;
+                }
+                h4 {
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+                .bal {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 20px;
+                    color: #7F8798;
+                    .balAB {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px!important;
+                        img {
+                            margin-right: 10px!important;
+                        }
+                        P {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #171717;
+                            font-weight: 600;
+                        }
+                    }
+                    .balSym {
+                        p {
+                            margin-left: 40px!important;
+                        }
+                    }
+                    .ballA {
+                        display: flex;
+                        align-items: center;
+                        .ballAB {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-right: 10px;
+                            p:first-child {
+                                margin-bottom: 20px!important;
+                                font-weight: 600;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+                select {
+                    width: 100%;
+                    height: 3.75rem;
+                    border: 0.063rem solid #1C1259;
+                    border-radius: 0.625rem;
+                    outline: none;
+                    margin-bottom: 2rem;
+                    font-size: 14px;
+                    padding: 0 0.5rem;
+                }
+                .view {
+                    font-size: 16px;
+                    line-height: 27px;
+                    color: #1C1259;
+                    text-align: center;
+                    margin: 30px 0!important;
+                }
+            }
+        }
+    }
+}
+
+// }
+// @media(max-width: 1126px) {
+//     .main {
+//         width: calc(100% - 70px);
+//         left: 70px;
+//     }
+//     .main.toggle {
+//         width: calc(100% - 229px);
+//         left: 229px;
+//     }
+// }
+@media(max-width: 991px) {
+    .conWrapper {
+        padding: 0 15px;
+        grid-template-columns: 1fr!important;
+        .con1 {
+            width: 100%;
+            order: 2;
+        }
+        .con2 {
+            width: 100%;
+            order: 1;
+            height: auto;
+        }
+    }
+    .boxCon,
+    .conBox {
+        margin: 20px 0!important;
+    }
+}
+
+// @media(max-width: 480px) {
+//     .main {
+//         width: 100%;
+//         left: 0px;
+//     }
+//     table {
+//         width: 100%;
+//         overflow-x: auto;
+//     }
+// }

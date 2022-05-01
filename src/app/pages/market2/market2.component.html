@@ -1,0 +1,277 @@
+<div class="coinType">
+    <div class="coin">
+        <img class="img" src="../../assets/images/bitcoin.png" /> 
+        <p>Bitcoin</p>
+        <p>BTC</p>
+    </div>
+    <div class="coinCon">
+        <p>$46000000</p>
+        <p>+3.58%</p>
+    </div>
+    <div class="coinCon">
+        <p>Ranking</p>
+        <p>#1</p>
+    </div>
+    <div class="coinCon">
+        <p>Market Cap</p>
+        <p>$46000000</p>
+    </div>
+    <div class="coinCon">
+        <p>Volume</p>
+        <p>$46000000</p>
+    </div>
+    <div class="tradeBtn">
+        <button>Buy</button>
+        <button class="swap">Swap</button>
+    </div>
+</div>
+<div class="conWrapper">
+    <div class="con1">
+        <ul>
+            <li [class.active]="viewMode == 'map'" (click)="viewMode = 'map'"><a>Overview</a></li>
+            <li [class.active]="viewMode == 'list'" (click)="viewMode = 'list'"><a>Transaction</a></li>
+        </ul>
+        <div class="overview" [ngSwitch]= "viewMode">
+            <div class="map" *ngSwitchCase = "'map'">
+                <div class="oWrapper">
+                    <div class="oCon">
+                        <div class="headerCon">
+                            <h4>Bitcoin Chart</h4>
+                            <div class="days">
+                                <p>1D<p>
+                                <p>1H<p>
+                                <p>1W<p>
+                                <p>1M<p>
+                                <p>ALL<p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oImg">
+                        <img class="img" src="../../assets/images/group16.png" />
+                    </div>
+                </div>
+                <div class="oAbout">
+                    <h4>About</h4>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique odio ultrices eros tellus id et.
+                    Adipiscing tempus, rutrum venenatis amet lobortis dui natoque in. Nisl id viverra vitae risus
+                    non nulla tortor, arcu. Feugiat vitae tempus nulla a. Laoreet porta vestibulum mi tellus. Neque
+                    mi magna commodo, lorem sit sit eu. Fames turpis praesent quam vulputate sit rutrum diam. 
+                    Viverra massa quis lacus, nam. Facilisis consequat lacus, neque, adipiscing a. Egestas
+                    lacus convallis tortor eget cras nibh dictumst dui. Lectus vel quis sed molestie. Pretium,
+                    at at suspendisse cursus nec gravida sed magna. Sit id id tristique lobortis aliquam in sit.
+                    </p>
+                </div>
+            </div>
+            
+
+            <div *ngSwitchCase = "'list'">
+                <div class="recentOrders">
+                    <h3>Transaction</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td>Type</td>
+                                <td>Amount</td>
+                                <td>Address</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Send</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="com">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Receive</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="rej">Rejected</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Deposit</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <p>1236474.....</p>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="com">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Buy</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="com">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Send</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Send</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="com">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Swap</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>10-02-22 08:40</td>
+                                <td>Send</td>
+                                <td>-0.435BTC</td>
+                                <td>
+                                    <div class="address">
+                                        <div>1236474.....</div>
+                                        <img class="img" src="../../assets/images/copy.png" /> 
+                                    </div>
+                                </td>
+                                <td class="com">Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="con2">
+        <div class="conBox" [ngSwitch]= "viewMode">
+            <div class="con" *ngSwitchCase = "'map'">                        
+                <h4>Related to BTC</h4>
+                <div class="bal">
+                    <div class="balA">
+                        <div class="balAB">
+                            <img class="img" src="../../assets/images/eth.png" />
+                            <p>Etherum</p>
+                        </div>
+                        <div class="balSym">
+                            <p>ETH</p>
+                        </div>
+                    </div>
+                    <div class="ballA">
+                        <div class="ballAB">
+                            <p>$41,000,000</p>
+                            <p>1ETH</p>
+                        </div>
+                        <div>
+                            <img class="img" src="../../assets/images/ar.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bal">
+                    <div class="balA">
+                        <div class="balAB">
+                            <img class="img" src="../../assets/images/solaris.png" />
+                            <p>Solaris</p>
+                        </div>
+                        <div class="balSym">
+                            <p>XLR</p>
+                        </div>
+                    </div>
+                    <div class="ballA">
+                        <div class="ballAB">
+                            <p>$41,000,000</p>
+                            <p>1XLR</p>
+                        </div>
+                        <div>
+                            <img class="img" src="../../assets/images/ar.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bal">
+                    <div class="balA">
+                        <div class="balAB">
+                            <img class="img" src="../../assets/images/doge.png" />
+                            <p>Dogecoin</p>
+                        </div>
+                        <div class="balSym">
+                            <p>DOGE</p>
+                        </div>
+                    </div>
+                    <div class="ballA">
+                        <div class="ballAB">
+                            <p>$41,000,000</p>
+                            <p>1DOGE</p>
+                        </div>
+                        <div>
+                            <img class="img" src="../../assets/images/ar.png" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="con" *ngSwitchCase = "'list'">                        
+                <h4>Filter</h4>
+                <div class="listCon">
+                    <div>
+                        <label>Transaction Type</label>
+                        <select name="type">
+                            <option value="">All Type</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Transaction Status</label>
+                        <select name="status">
+                            <option value="">All Status</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Date</label>
+                        <select name="date">
+                            <option value="volvo">Volvo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

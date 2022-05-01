@@ -1,0 +1,85 @@
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #f5f5f5;
+    box-shadow: 0rem 0.125rem 2rem rgba(0, 0, 0, 0.1);
+    height: 60px;
+    .toggle {
+        display: none;
+        .fas {
+            font-size: 25px!important;
+            margin: 0 10px;
+        }
+    }
+    p {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.688rem;
+        color: #171717;
+        margin-left: 0.625rem;
+    }
+    .conA {
+        flex: 1;
+        p {
+            font-size: 12px;
+            padding-left: 3%;
+        }
+        .child {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+            button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+                background: #2779EC;
+                border-radius: 0.625rem;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 12px;
+                line-height: 1.5rem;
+                margin-right: 15px;
+                .buy2 {
+                    display: none;
+                    margin: 0 5px;
+                    font-size: 18px;
+                }
+                .buy {
+                    margin: 0 5px;
+                }
+            }
+            .img {
+                margin-right: 15px;
+            }
+            .user {
+                width: 40px;
+                height: 40px;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .toggle {
+        display: block!important;
+    }
+}
+
+@media(max-width: 768px) {
+    .buy {
+        display: none!important;
+    }
+    .buy2 {
+        display: block!important;
+    }
+}
