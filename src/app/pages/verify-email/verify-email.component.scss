@@ -1,0 +1,28 @@
+.cardBtn {
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .con1 {
+        margin-top: 1.25rem;
+        margin-bottom: 2.375rem;
+        text-align: center;
+    }
+    .con2 {
+        text-align: center;
+        margin-bottom: 4.938rem;
+        p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            text-align: center;
+            color: #171717;
+        }
+    }
+}

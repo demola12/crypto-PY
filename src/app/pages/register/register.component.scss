@@ -1,0 +1,33 @@
+.form-wrapper {
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.cardBtn {
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.cardFooter {
+    margin: 1.875rem;
+    font-size: 1rem;
+    .firstCon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+            margin-top: 1.25rem;
+        }
+    }
+    .secCon {
+        text-align: center;
+        margin: 1.25rem 0;
+        font-size: 1rem;
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1C1259;
+        }
+    }
+}

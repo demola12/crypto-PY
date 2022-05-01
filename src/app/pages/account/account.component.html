@@ -1,0 +1,142 @@
+<!-- <div class="container">
+    <app-sidebar></app-sidebar>
+
+    <div class="main">
+        <app-navbar></app-navbar>-->
+        <ul class="list">
+            <li [class.active]="viewMode == 'profile'" (click)="viewMode = 'profile'"><a>Profile</a></li>
+            <li [class.active]="viewMode == 'payment'" (click)="viewMode = 'payment'"><a>Payment</a></li>
+            <li [class.active]="viewMode == 'security'" (click)="viewMode = 'security'"><a>Security</a></li>
+        </ul>
+        
+        <div class="overview" [ngSwitch]= "viewMode">
+            <div class="proWrapper" *ngSwitchCase = "'profile'">
+                <div class="con1">
+                    <div class="first">
+                        <div class="content">
+                            <h5>Profile Photo</h5>
+                            <div class="box">
+                                <img class="img" src="../../assets/images/user.png" /> 
+                                <div class="button">
+                                    <button>Upload</button>
+                                    <br>
+                                    <button>Delete</button>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="save">
+                            <button>Save</button>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div class="content">
+                            <h5>Reset Password</h5>
+                            <div class="box">
+                                <label>Current Password</label>
+                                <app-input [fieldName]="'*****************'"></app-input>  
+                                <p>show</p>                     
+                            </div>
+                            <div class="box">
+                                <label>Reset Password</label>
+                                <app-input [fieldName]="'*****************'"></app-input> 
+                                <p>show</p>                       
+                            </div>
+                        </div>
+                        <div class="save">
+                            <button>Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="con2">
+                    <div class="third">
+                        <div class="content">
+                            <h5>Personal Details</h5>
+                            <div class="input">
+                                <div class="box">
+                                    <label>First Name</label>
+                                    <app-input></app-input>                       
+                                </div>
+                                <div class="box">
+                                    <label>Last Name</label>
+                                    <app-input></app-input>                       
+                                </div>
+                            </div>
+                            <div class="input">
+                                <div class="box">
+                                    <label>Country</label>
+                                    <app-input></app-input>                       
+                                </div>
+                                <div class="box">
+                                    <label>State</label>
+                                    <app-input></app-input>                       
+                                </div>
+                            </div>
+                            <div class="input">
+                                <div class="box">
+                                    <label>City</label>
+                                    <app-input></app-input>                       
+                                </div>
+                                <div class="box">
+                                    <label>Post Code</label>
+                                    <app-input></app-input>                       
+                                </div>
+                            </div>
+                            <div class="input">
+                                <div class="box">
+                                    <label>Addesss</label>
+                                    <app-input></app-input>                       
+                                </div>
+                                <div class="box">
+                                    <label>Phone</label>
+                                    <app-input></app-input>                       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="save">
+                            <button><img class="img" src="../../assets/images/upload.png" /> &nbsp;&nbsp; Upload Proof of Address (Utility Bill)</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payWrapper" *ngSwitchCase = "'payment'">
+                <div class="content">
+                    <h5>Payment Details</h5>
+                    <div class="master">
+                        <div class="mastercard">
+                            <p>
+                                <img class="img" src="../../assets/images/master.png" />
+                                &nbsp;
+                                <span>Mastercard</span>
+                            <p>
+                            <p>1234 ****** 1234 **** 1234</p>
+                        </div>
+                        <button>Remove</button>
+                    </div>
+                    <div class="box">
+                        <label>Card Holder Name</label>
+                        <app-input></app-input>              
+                    </div>
+                    <div class="box">
+                        <label>Credit Card</label>
+                        <app-input></app-input>                  
+                    </div>
+                    <div class="input">
+                        <div class="box">
+                            <label>Expiry</label>
+                            <app-input></app-input>                       
+                        </div>
+                        <div class="box">
+                            <label>CVV</label>
+                            <app-input></app-input>                       
+                        </div>
+                    </div>
+                </div>
+                <div class="save">
+                    <button>Add Card</button>
+                </div>
+            </div>
+        </div>
+            
+    <!--</div>
+</div>-->

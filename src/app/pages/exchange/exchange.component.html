@@ -1,0 +1,87 @@
+<div class="conWrapper">
+    <div class="con1">
+        <div class="boxCon">
+            <div class="boxSec">
+                <ul>
+                    <li [class.active]="viewMode == 'map'" (click)="viewMode = 'map'"><a>Desposit</a></li>
+                    <li><span></span></li>
+                    <li [class.active]="viewMode == 'list'" (click)="viewMode = 'list'"><a>Withdrawal</a></li>
+                </ul>
+                <div [ngSwitch]= "viewMode">
+                    <div *ngSwitchCase = "'map'" class="map">
+                        <div class="listCon">
+                            <div>
+                                <label>Coin Name</label>
+                                <app-select></app-select>
+                            </div>
+                            <div>
+                                <label>Amount</label>
+                                <app-input></app-input>
+                            </div>
+                            <div>
+                                <label>Address</label>
+                                <app-input></app-input>
+                            </div>
+                            <div class="bttn">
+                                <app-button
+                                    [text]="'Submit'"
+                                >
+                                </app-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngSwitchCase = "'list'" class="map">
+                        <div class="listCon">
+                            <div>
+                                <label>Coin Name</label>
+                                <app-input
+                                ></app-input>
+                            </div>
+                            <div>
+                                <label>Amount</label>
+                                <app-input></app-input>
+                            </div>
+                            <div>
+                                <label>Address</label>
+                                <app-input></app-input>
+                            </div>
+                            <div class="bttn">
+                                <app-button
+                                    [text]="'Submit'"
+                                >
+                                </app-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="con2">
+        <div class="conBox" [ngSwitch]= "viewMode">
+            <div class="con" *ngSwitchCase = "'list'">
+                
+                <h4>Balance Info</h4>
+                <div class="bal">
+                    <p>Available Balance</p>
+                    <p><b>0.122222BTC</b></p>
+                </div>
+                <div class="bal">
+                    <p>Withdraw</p>
+                    <p><b>0.122222BTC</b></p>
+                </div>
+                <div class="bal">
+                    <p>Neetwork Fee</p>
+                    <p><b>0.122222BTC</b></p>
+                </div>
+            </div>
+            <div class="con" *ngSwitchCase = "'map'">
+                <h4>Balance Info</h4>
+                <div class="bal">
+                    <p>Available Balance</p>
+                    <p><b>0.122222BTC</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
