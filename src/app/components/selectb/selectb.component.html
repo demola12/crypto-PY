@@ -1,0 +1,8 @@
+<select  #blockchainselect [formControl]="control" class="formName">
+    <option *ngFor="let value of Values;" [text]="value.blockchain+' '+value.symbol" [value]="[value.blockchain+'_'+value.symbol]"></option>
+</select>
+
+<!-- <select class="form-control" formControlName="network" #networks_select (change)='onOptionsSelected(networks_select.value)'>
+    <option value="" disabled selected hidden>Select a network...</option>
+    
+    <option *ngFor="let network of Networks;" [text]="network.isp_name" [value]="[network.isp_name,network.public_id]"  >{{network.isp_name}}</option> -->

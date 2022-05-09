@@ -1,0 +1,228 @@
+<!--<div class="container">
+    <app-sidebar></app-sidebar>
+
+    <div class="main" [ngClass]="item ? 'toggle':''">
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+        <div>|||</div> -->
+        <div class="conWrapper">
+            <div class="con1">
+                <div class="overview">               
+                    <div *ngIf="!AddNewAddressStatus" class="recentOrders">
+                        <div class="cardHeader">
+                            <p>$48,898,000</p>
+                            <div>
+                                <h5>$43,000,000 <span>0.1234BTC</span></h5>                                
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                   
+                                    <th>Address label</th>
+                                    <th>Name</th>
+                                    <th>Wallet address</th>
+                                    <th>Amount</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let address of addresses; let i=index;'>
+                                    <td>
+                                        <div class="coin">
+                                            <img class="img" src="../../assets/images/{{address.token_symbol || 'eth'}}.png" />
+                                            <p>{{address.name}}</p>
+                                        </div>
+                                    </td>
+                                    <td>  
+                                        <div class="coin">                                     
+                                            <span >{{address.token_symbol || 'ETH'}}</span>  
+                                        </div>   
+                                        <small hidden id={{address.address}}>{{address.address}}</small>                                  
+                                    </td>
+                                    
+                                    <td>
+                                        <div>
+                                            <p id="copy-clipboard" (click)="CopyToClipboard(address.address)">{{address.address | summary:25}}</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="amount">                                      
+                                            <p>$46,000,000</p>
+                                            <span>+ {{address.balance}} {{address.token_symbol || 'ETH'}}</span>  
+                                        </div>                                        
+                                    </td>
+                                    <td>
+                                        <div class="tradeBtn">
+                                            <button>Buy</button>
+                                            <button>Swap</button>
+                                        </div>
+                                    </td>
+                                </tr>    
+                                                       
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                    <div *ngIf="AddNewAddressStatus" class="boxCon">
+                        <div class="boxSec">
+                            <ul>
+                                <li [class.active]="viewMode == 'map'" (click)="viewMode = 'map'"><a>Import Token</a></li>
+                                <li><span></span></li>
+                                <li [class.active]="viewMode == 'list'" (click)="viewMode = 'list'"><a>Add new address</a></li>
+                            </ul>
+                            <div [ngSwitch]= "viewMode">
+                                <div *ngSwitchCase = "'map'" class="map">
+                                    <div class="listCon">
+                                        <div class="con2 addToken">
+                                            <div class="conBox">
+                                                <div class="con">                        
+                                                    <h4>Import Tokens</h4>
+                                                    <div class="bal">
+                                                        <div class="balA">
+                                                            <div class="balAB">
+                                                               <app-selectb style="width:270px" [formControl]="blockchain" ngDefaultControl></app-selectb>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="bal">
+                                                        <div class="balA">
+                                                            <div class="balAB">
+                                                                <app-input [formControl]="name" [label]="'Address label'" [inputType]="'text'" ngDefaultControl></app-input>        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="bal">
+                                                        <div class="balA">
+                                                            <div class="balAB">
+                                                                <app-input [formControl]="contract_address" [label]="'Contract address'" [inputType]="'text'" ngDefaultControl></app-input>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="bal">
+                                                        <div class="balA">
+                                                            <div class="importBtn">
+                                                                <button (click)="submit('newtoken')" style="width: 150px;" >Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngSwitchCase = "'list'" class="map">
+                                    <form>
+                                        <div class="listCon">
+                                            <div *ngIf="AddNewAddressStatus" class="con2 addToken">
+                                                <div class="conBox">
+                                                    <div class="con">                        
+                                                        <h4>Add new address</h4>
+                                                        <div class="bal">
+                                                            <div class="balA">
+                                                                <div class="balAB">
+                                                                    <app-selectb style="width:270px" [formControl]="blockchain" ngDefaultControl></app-selectb>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                
+                                                        <div class="bal">
+                                                            <div class="balA">
+                                                                <div class="balAB">
+                                                                    <app-input [formControl]="name" [label]="'Address label'" [inputType]="'text'" ngDefaultControl></app-input>   
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                
+                                                        <div class="bal">
+                                                            <div class="balA">
+                                                                <div class="importBtn">
+                                                                    <button (click)="submit('blockchainaddress')" style="width: 150px;">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="importBtn">
+                        <button *ngIf="!AddNewAddressStatus" (click)="addNewAddress()">Add wallet/Import Tokens</button>
+                        <button  *ngIf="AddNewAddressStatus" (click)="cancelNewAddressAction()">Cancel</button>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="con2">
+                <div class="conBox">
+                    <div class="con">                        
+                        <h4>Transactions</h4>
+                        <div class="bal">
+                            <div class="balA">
+                                <div class="balAB">
+                                    <img class="img" src="../../assets/images/eth.png" />
+                                    <p>Deposit</p>
+                                </div>
+                                <div class="balSym">
+                                    <p>to another wallet</p>
+                                </div>
+                            </div>
+                            <div class="ballA">
+                                <div class="ballAB">
+                                    <p>$41,000,000</p>
+                                    <p>1ETH</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bal">
+                            <div class="balA">
+                                <div class="balAB">
+                                    <img class="img" src="../../assets/images/solaris.png" />
+                                    <p>Buy</p>
+                                </div>
+                                <div class="balSym">
+                                    <p>with credit card</p>
+                                </div>
+                            </div>
+                            <div class="ballA">
+                                <div class="ballAB">
+                                    <p>$41,000,000</p>
+                                    <p>1XLR</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bal">
+                            <div class="balA">
+                                <div class="balAB">
+                                    <img class="img" src="../../assets/images/doge.png" />
+                                    <p>Receive</p>
+                                </div>
+                                <div class="balSym">
+                                    <p>from bitcoin address</p>
+                                </div>
+                            </div>
+                            <div class="ballA">
+                                <div class="ballAB">
+                                    <p>$41,000,000</p>
+                                    <p>1DOGE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="view">View all</p>
+                    </div>
+                </div>
+            </div>
+	    </div>
+    <!-- </div>
+</div> -->

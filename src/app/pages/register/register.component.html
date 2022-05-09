@@ -1,0 +1,22 @@
+<div class="auth-wrapper">
+    <app-card [title]="'Register New Account'">
+        <div class="form-wrapper">
+            <app-input [inputType]="'text'" [formControl]="firstname" [fieldName]="'First Name'" ngDefaultControl></app-input>
+            <app-input [inputType]="'text'" [formControl]="lastname" [fieldName]="'Last Name'" ngDefaultControl></app-input>
+            <app-input [inputType]="'text'" [formControl]="email" [fieldName]="'Email Address'" ngDefaultControl></app-input>
+            <app-input [inputType]="'password'" [formControl]="password" [fieldName]="'Password'" ngDefaultControl></app-input>
+        </div>
+        <div class="cardBtn">
+            <app-button
+                [text]="'Create Account'"
+                (onClick) ="register()"
+            >
+            </app-button>
+        </div>
+        <div class="cardFooter">
+            <div class="secCon">
+                <p>Already have an acccount? <a href="">Sign in</a></p>
+            </div>
+        </div>
+    </app-card>
+</div>
